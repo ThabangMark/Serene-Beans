@@ -111,12 +111,12 @@
             cursor: pointer;
         }
 
-        /* Page Banner */
-        .page-banner {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/400');
+        /* About Hero Section */
+        .about-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/500');
             background-size: cover;
             background-position: center;
-            height: 40vh;
+            height: 50vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -124,16 +124,21 @@
             color: var(--light-text);
         }
 
-        .page-banner h2 {
+        .about-hero-content {
+            max-width: 800px;
+        }
+
+        .about-hero h2 {
             font-size: 3rem;
             margin-bottom: 20px;
         }
 
-        /* About Section Styles */
-        .about-section {
-            padding: 80px 0;
+        .about-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
 
+        /* Section Styling */
         .section-title {
             text-align: center;
             margin-bottom: 50px;
@@ -152,70 +157,89 @@
             margin: 0 auto;
         }
 
+        /* Our Story Section */
         .our-story {
+            padding: 80px 0;
+        }
+
+        .story-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
             align-items: center;
-            margin-bottom: 80px;
         }
 
-        .our-story-img {
-            border-radius: 8px;
+        .story-text {
+            padding-right: 20px;
+        }
+
+        .story-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .story-text p {
+            margin-bottom: 20px;
+        }
+
+        .story-image {
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .our-story-img img {
+        .story-image img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        .our-story-content h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
+        /* Values Section */
         .our-values {
-            background-color: #f0e6d9;
             padding: 80px 0;
+            background-color: #f0e6d9;
         }
 
-        .values-container {
+        .values-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
         .value-card {
             background-color: #fff;
-            padding: 30px;
             border-radius: 8px;
-            text-align: center;
+            padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
         }
 
         .value-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
 
         .value-card h3 {
             font-size: 1.5rem;
-            color: var(--primary-color);
             margin-bottom: 15px;
+            color: var(--primary-color);
         }
 
-        .team-section {
+        /* Team Section */
+        .our-team {
             padding: 80px 0;
         }
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -225,11 +249,16 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s;
         }
 
-        .team-member img {
-            width: 100%;
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-photo {
             height: 300px;
+            width: 100%;
             object-fit: cover;
         }
 
@@ -238,38 +267,167 @@
         }
 
         .team-info h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             margin-bottom: 5px;
             color: var(--primary-color);
         }
 
-        .team-info p {
+        .team-info h4 {
             color: #666;
+            font-size: 1.1rem;
             margin-bottom: 15px;
         }
 
-        .social-links {
+        .team-info p {
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 15px;
         }
 
-        .social-links a {
+        .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 35px;
-            height: 35px;
+            width: 36px;
+            height: 36px;
             background-color: var(--primary-color);
             border-radius: 50%;
             color: var(--light-text);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: #5d4130;
+        }
+
+        /* Coffee Journey Section */
+        .coffee-journey {
+            padding: 80px 0;
+            background-color: #f0e6d9;
+        }
+
+        .journey-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .journey-step {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .step-info {
+            padding: 20px;
+        }
+
+        .step-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Section */
+        .mini-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Call to Action */
+        .cta {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             transition: background-color 0.3s;
             text-decoration: none;
         }
 
-        .social-links a:hover {
+        .btn:hover {
             background-color: #5d4130;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--light-text);
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         /* Footer */
@@ -324,6 +482,22 @@
             display: flex;
             gap: 15px;
             margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light-text);
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
         }
 
         .copyright {
@@ -394,13 +568,52 @@
             .main-nav.active {
                 display: block;
             }
-            
-            .our-story {
+
+            .about-hero h2 {
+                font-size: 2rem;
+            }
+
+            .about-hero p {
+                font-size: 1rem;
+            }
+
+            .story-content {
                 grid-template-columns: 1fr;
             }
-            
-            .values-container {
-                grid-template-columns: 1fr;
+
+            .story-text {
+                padding-right: 0;
+                order: 2;
+            }
+
+            .story-image {
+                order: 1;
+            }
+
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta p {
+                font-size: 1rem;
             }
         }
     </style>
@@ -416,13 +629,14 @@
             <button class="mobile-nav-toggle">☰</button>
             <nav class="main-nav">
                 <ul>
-                    < <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="order.html">Order Online</a></li>order.html">Order Online<
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="order.html">Order Online</a></li>
+                    <li>
                         <a href="cart.html" class="cart-icon">
                             🛒
                             <span id="cart-count">0</span>
@@ -433,30 +647,30 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-        <div class="container">
-            <h2>About Serene Beans</h2>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h2>Our Story</h2>
+            <p>Brewing exceptional coffee with passion and purpose since 2015</p>
         </div>
     </section>
 
     <!-- Our Story Section -->
-    <section class="about-section">
+    <section class="our-story">
         <div class="container">
             <div class="section-title">
-                <h2>Our Story</h2>
-                <p>The journey of Serene Beans and how we became a part of the community.</p>
+                <h2>About Serene Beans</h2>
+                <p>Discover the journey behind your favorite cup of coffee</p>
             </div>
-            <div class="our-story">
-                <div class="our-story-img">
-                    <img src="/api/placeholder/600/400" alt="Serene Beans Coffee Shop">
+            <div class="story-content">
+                <div class="story-text">
+                    <h3>From Dream to Reality</h3>
+                    <p>Serene Beans was born from a simple passion: to create a space where coffee lovers could enjoy exceptional brews in a welcoming atmosphere. Founded in 2015 by three friends who shared a love for specialty coffee, our journey began in a small corner shop in downtown Gaborone.</p>
+                    <p>What started as a modest operation with just one espresso machine and a handful of seats has grown into Botswana's premier coffee destination. Throughout our journey, our commitment to quality, sustainability, and community has never wavered.</p>
+                    <p>Today, we continue to source the finest beans from ethical farms worldwide, roast them to perfection in our own facility, and serve them with pride and passion. Every cup tells a story – of the farmers who grew the beans, the roasters who perfected them, and the baristas who craft each drink with care.</p>
                 </div>
-                <div class="our-story-content">
-                    <h3>From Passion to Profession</h3>
-                    <p>Serene Beans was born in 2015 from a simple love for exceptional coffee and a desire to create a community space where people could slow down and enjoy quality moments.</p>
-                    <p>Founded by siblings Thabo and Naledi Moremi, who grew up in the rich coffee regions of Botswana, we started as a small kiosk with just three types of coffee and a handful of pastries.</p>
-                    <p>Fast forward to today, we've grown into Gaborone's favorite coffee destination, with our commitment to quality, sustainability, and community remaining at the heart of everything we do.</p>
-                    <p>Our beans are ethically sourced from small-scale farmers across Africa and South America, and we roast them in small batches right here in our flagship store to ensure maximum freshness and flavor.</p>
+                <div class="story-image">
+                    <img src="/api/placeholder/600/400" alt="Coffee Shop Interior">
                 </div>
             </div>
         </div>
@@ -466,90 +680,43 @@
     <section class="our-values">
         <div class="container">
             <div class="section-title">
-                <h2>Our Values</h2>
-                <p>The principles that guide us every day as we serve our community.</p>
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do at Serene Beans</p>
             </div>
-            <div class="values-container">
+            <div class="values-grid">
                 <div class="value-card">
-                    <div class="value-icon">♻️</div>
+                    <div class="value-icon">🌱</div>
                     <h3>Sustainability</h3>
-                    <p>We are committed to environmentally friendly practices, from our biodegradable packaging to our support for sustainable farming. We believe that great coffee should not come at the expense of our planet.</p>
+                    <p>We're committed to environmentally responsible practices, from our biodegradable packaging to our partnerships with sustainable farms.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">🤝</div>
                     <h3>Community</h3>
-                    <p>We're more than just a coffee shop—we're a gathering place for our community. We support local events, artists, and initiatives to foster connections and build a stronger neighborhood.</p>
+                    <p>We believe in building meaningful connections with our customers, suppliers, and the local community through events and outreach programs.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">⭐</div>
                     <h3>Quality</h3>
-                    <p>From bean to cup, we never compromise on quality. We carefully select our ingredients, train our baristas extensively, and continuously refine our recipes to deliver the perfect experience every time.</p>
+                    <p>We never compromise on quality, ensuring every bean is carefully selected, expertly roasted, and skillfully brewed to perfection.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Passion</h3>
+                    <p>Our team's genuine passion for coffee shines through in everything we do – from bean selection to the final pour.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
+
+
+    <!-- Call to Action Section -->
+    <section class="cta">
         <div class="container">
-            <div class="section-title">
-                <h2>Meet Our Team</h2>
-                <p>The passionate people behind your favorite coffee experience.</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="/api/placeholder/300/300" alt="Thabo Moremi">
-                    <div class="team-info">
-                        <h3>Thabo Moremi</h3>
-                        <p>Co-Founder & Head Roaster</p>
-                        <p>With 15 years of experience in coffee roasting, Thabo personally oversees our bean selection and roasting processes to ensure perfect results every time.</p>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">i</a>
-                            <a href="#" aria-label="Twitter">t</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="/api/placeholder/300/300" alt="Naledi Moremi">
-                    <div class="team-info">
-                        <h3>Naledi Moremi</h3>
-                        <p>Co-Founder & Head Chef</p>
-                        <p>Trained in Paris, Naledi brings her culinary expertise to our menu, creating delicious pastries and treats that perfectly complement our coffee selection.</p>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">i</a>
-                            <a href="#" aria-label="Twitter">t</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="/api/placeholder/300/300" alt="Kgosi Tau">
-                    <div class="team-info">
-                        <h3>Kgosi Tau</h3>
-                        <p>Master Barista</p>
-                        <p>An award-winning barista with a passion for latte art, Kgosi leads our barista training program and ensures every cup meets our high standards.</p>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">i</a>
-                            <a href="#" aria-label="Twitter">t</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <img src="/api/placeholder/300/300" alt="Lesedi Moyo">
-                    <div class="team-info">
-                        <h3>Lesedi Moyo</h3>
-                        <p>Community Manager</p>
-                        <p>Lesedi organizes our events, manages our social media, and ensures that Serene Beans remains an integral part of the community we serve.</p>
-                        <div class="social-links">
-                            <a href="#" aria-label="Facebook">f</a>
-                            <a href="#" aria-label="Instagram">i</a>
-                            <a href="#" aria-label="Twitter">t</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2>Come Visit Us Today</h2>
+            <p>Experience the warmth and flavor of Serene Beans in person. Join us for a cup and become part of our story!</p>
+            <a href="contact.html" class="btn">Find Us</a>
+            <a href="menu.html" class="btn btn-secondary">View Menu</a>
         </div>
     </section>
 
@@ -593,7 +760,7 @@
                     <p>Subscribe to our newsletter for updates and special offers.</p>
                     <form>
                         <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 4px; border: none;">
-                        <button type="submit" class="btn" style="width: 100%; margin-top: 10px; background-color: var(--primary-color); color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">Subscribe</button>
+                        <button type="submit" class="btn" style="width: 100%; margin-top: 10px;">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -609,7 +776,7 @@
             document.querySelector('.main-nav').classList.toggle('active');
         });
 
-        // Shopping Cart Count
+        // Simple Shopping Cart Functionality
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         updateCartCount();
 
